@@ -18,8 +18,8 @@ class CreateTicketTable extends Migration
             $table->unsignedBigInteger('customer_id');
             $table->string('subject');
             $table->string('description');
-            $table->date('submission_date')->nullable();
-            $table->date('due_date')->nullable();
+            $table->string('submission_date')->nullable();
+            $table->string('due_date')->nullable();
             $table->timestamps();
 
             //foreign key index

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Customer;
 use App\Ticket;
+use DateTime;
 use Illuminate\Http\Request;
 
 class SubmissionController extends Controller
@@ -18,7 +19,7 @@ class SubmissionController extends Controller
             'subject' => 'required',
             'description'=> 'required',
         ]);
-
+        $datetime_now = new DateTime();
         $already_customer = Customer::where('email', '=', $customer_data['email'])->first();
         if ($already_customer == null)
         { //if the customer is new
@@ -31,6 +32,8 @@ class SubmissionController extends Controller
             $ticket->customer_id = $customer->id;
             $ticket->subject = $ticket_data['subject'];
             $ticket->description = $ticket_data['description'];
+            $ticket->submission_date = $datetime_now->format('Y-m-d H:i:s');
+            $ticket->due_date = "2020-00-00 00:00:00";
             $ticket->save();
             return view("success", compact('ticket','customer' ));
         }
@@ -42,6 +45,8 @@ class SubmissionController extends Controller
             $ticket->customer_id = $already_customer->id;
             $ticket->subject = $ticket_data['subject'];
             $ticket->description = $ticket_data['description'];
+            $ticket->submission_date = $datetime_now->format('Y-m-d H:i:s');
+            $ticket->due_date = "2020-00-00 00:00:00";
             $ticket->save();
             return view("success", compact('ticket','customer' ));
         }
@@ -50,6 +55,9 @@ class SubmissionController extends Controller
             abort("403");
         }
 
+    }
+    public function due_date_calculator($date){
+        //date -> due_date
     }
 
 }

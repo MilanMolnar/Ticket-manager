@@ -16,10 +16,10 @@
                         <hr>
                         <div>
                             <div class="col-6">
-                                submitted at: {{"2020/00/00, 00:00"}}
+                                submitted at: {{$ticket->submission_date}}
                             </div>
                             <div class="col-6">
-                                due date at: {{"2020/00/00, 00:00"}}
+                                due date at: {{$ticket->due_date}}
                             </div>
                         </div>
                     </div>
