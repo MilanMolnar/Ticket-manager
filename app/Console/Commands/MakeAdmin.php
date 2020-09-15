@@ -44,10 +44,10 @@ class MakeAdmin extends Command
         //If there are no master users
         if ( 1 > User::all()->count() ){
             $name = $this->ask('What should be your name?');
-            $email = $this->ask('What should be your username?') . "@" . "developio.com";
+            $email = $this->ask('What should be your username? (your email will be "username@developio.com")') . "@" . "developio.com";
             $password = Hash::make($this->secret('What should be the password?'));
             $successMessage = "Succesfully created '" . $name . "' master user!";
-            $confirmMessage = 'Are you sure you want to create' . $name . 'master user?';
+            $confirmMessage = 'Are you sure you want to create ' . $name . ' master user?';
             if ($this->confirm($confirmMessage)) {
                 $admin = new User();
                 $admin->name = $name;
