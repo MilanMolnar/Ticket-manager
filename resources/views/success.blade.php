@@ -4,7 +4,7 @@
 
     <div class="alert alert-success col-6 offset-3" role="alert">
         <h2 class="alert-heading">Ticket successfully submitted!</h2>
-        <h4>Your ticket will be handled by *{{"insert due date here"}}* !</h4>
+        <h4>Your ticket will be handled by: {{$ticket->due_date}} !</h4>
         <hr>
         Owner:
         <p class=" card p-2"> {{$customer->name}}</p>
@@ -18,8 +18,4 @@
     <a class="btn btn-outline-primary offset-5 col-2" href="/home">
         Back
     </a>
-
-
-
-
 @endsection

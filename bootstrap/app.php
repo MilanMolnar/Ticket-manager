@@ -41,6 +41,10 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+$app->singleton(App\Interfaces\IDueDateCalculator::class, function() {
+    return new App\Services\DateCalculator();
+});
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application

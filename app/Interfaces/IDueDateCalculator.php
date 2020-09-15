@@ -1,7 +1,7 @@
 <?php
 namespace App\Interfaces;
 
-Interface DueDateCalculatorInterface
+Interface IDueDateCalculator
 {
-    public function ();
+    public function due_date_calculator($date);
 }

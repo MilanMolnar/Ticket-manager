@@ -17,9 +17,15 @@ Route::get('/', function () {
     return view('home');
 });
 
-Auth::routes();
+
+Auth::routes();//All the auth routes
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/ticketlist', 'TicketsController@show')->name('admin');
 Route::post('/submit', 'SubmissionController@store');
+Route::post('/sort/submit', 'SortingController@submit');
+Route::post('/sort/due', 'SortingController@due');
+Route::post('/customer', 'SortingController@customer_filter');
+
+
 

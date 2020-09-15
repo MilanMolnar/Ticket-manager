@@ -4,6 +4,12 @@
 <div class="container">
     <div class="row justify-content-center pt-5">
         <div class="col-md-8">
+            @if (session()->has("message"))
+                <div class="alert alert-danger alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>{{ session()->get("message")}}</strong>
+                </div>
+            @endif
             <div class="card">
                 <div class="card-header"><b>Ticket Submission Form</b></div>
 
@@ -72,7 +78,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-3">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" name="submit" class="btn btn-primary">
                                     Submit Ticket
                                 </button>
                             </div>
