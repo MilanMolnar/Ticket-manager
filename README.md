@@ -1,18 +1,19 @@
 # Ticket Manager
-Ticket Manager is a easy to use ticket submission and control app
+Ticket Manager is a easy to use ticket submission and control app.
 
-  - Easy to understand UI
-  - Admin page
-  - Filtering submissions
+  - Easy to understand UI.
+  - Admin page.
+  - Filtering submissions.
 
 # Installation!
 
-> Clone the repository and follow the steps
+> Clone the repository and follow the steps.
 
 Set up your .env file to your desired database!
 ```sh
 cd master
 composer install
+php artisan migrate
 php artisan make:admin
 ```
 Note: You can check the artisan command list and its description with the command:
@@ -25,7 +26,7 @@ php artisan
 Used technologies for this project:
 
 * [Laravel] - Best framework for creating awesome apps fast.
-* [PHP] - HTML enhanced for web apps!
+* [PHP] - for the best web apps!
 * [PHP Storm] - Awesome php text editor by jetbrains.
 * [MySQL] - Oracles awesome database.
 * [jQuery] - For Ajax request.
@@ -33,10 +34,14 @@ Used technologies for this project:
 * [Github] - duh.
 
 # Usage
+Run the command (default port: '8000')
+```sh
+php artisan serve
+```
 
 ### - Customer:
 - Write a ticket on **'/ '** using your E-mail and Name, Note your E-mail will be binded to your Name.
-- Check the due date on **'/success'**, and navigate back to write an other ticket
+- Check the due date on **'/success'**, and navigate back to write an other ticket.
 ### - Admin:
 - Login to your custom created master user account on **'/login'**.
 - Check the tickets on **'/admin/ticketlist'**
