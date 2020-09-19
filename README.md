@@ -56,11 +56,9 @@ Free to use, free to modify, free to share.
 
 
    [MySQL]: <https://www.mysql.com/>
-   [Github]: <https://github.com/g>
-   [node.js]: <http://nodejs.org>
+   [Github]: <https://github.com/>
    [Bootstrap]: <https://getbootstrap.com/>
    [jQuery]: <http://jquery.com>
    [Laravel]: <https://laravel.com/>
-   [express]: <http://expressjs.com>
    [Php]: <https://www.php.net/>
    [PHP storm]: <https://www.jetbrains.com/phpstorm/>
