@@ -1,3 +1,7 @@
+| PHP Build | Laravel Build |
+|-----------|---------------|
+| ![PHP Composer](https://github.com/MilanMolnar/Ticket-manager/workflows/PHP%20Composer/badge.svg) | ![Laravel](https://github.com/MilanMolnar/Ticket-manager/workflows/Laravel/badge.svg) |
+
 # Ticket Manager
 Ticket Manager is a easy to use ticket submission and control app.
 
