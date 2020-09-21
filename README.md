@@ -1,4 +1,4 @@
-| PHP Build status | Laravel Build status |
+| PHP Build status: | Laravel Build status:  |
 |-----------|---------------|
 | ![PHP Composer](https://github.com/MilanMolnar/Ticket-manager/workflows/PHP%20Composer/badge.svg) | ![Laravel](https://github.com/MilanMolnar/Ticket-manager/workflows/Laravel/badge.svg) |
 
